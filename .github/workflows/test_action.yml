@@ -21,6 +21,9 @@ jobs:
             -Dsonar.projectVersion=1.0
             -Dsonar.sources=src/
             -Dsonar.language=python
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         
       - name: Fetch num squared
         id: get_square
